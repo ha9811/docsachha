@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linemain"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@android:color/holo_blue_dark">
+
+        <ImageButton
+            android:id="@+id/imgbtntrangchu"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/trangchuuuu"
+            android:background="@android:color/holo_blue_dark"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Trang chủ"
+            android:layout_marginLeft="5dp"
+            android:textSize="22sp"
+            android:textColor="@android:color/black"
+            android:gravity="center_vertical"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line1"
+        android:layout_below="@+id/linemain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_green_light"
+        android:weightSum="3">
+        <Button
+            android:id="@+id/btnvanhoc"
+            android:onClick="ClickFragmentvanhoc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Văn học"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/btnkhoahoc"
+            android:onClick="ClickFragmentkhoahoc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Khoa học"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/btncongnghe"
+            android:onClick="ClickFragmentcongnghe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Công nghệ"
+            android:layout_weight="1"/>
+    </LinearLayout>
+    <ViewFlipper
+        android:layout_below="@+id/line1"
+        android:id="@+id/viewFlipper"
+        android:layout_width="match_parent"
+        android:layout_height="180dp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/sach1" />
+
+        <ImageView
+            android:src="@drawable/sach2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"/>
+        <ImageView
+            android:src="@drawable/sach3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"/>
+        <ImageView
+            android:src="@drawable/sach4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"/>
+        <ImageView
+            android:src="@drawable/sach5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"/>
+    </ViewFlipper>
+    <TextView
+        android:id="@+id/txtnew"
+        android:layout_below="@+id/viewFlipper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="New and Hot"
+        android:textSize="22sp"
+        android:layout_marginLeft="20dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_red_dark"/>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/txtnew"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclersachhot"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_below="@id/line1"
+        android:id="@+id/line11"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    </LinearLayout>
+</RelativeLayout>

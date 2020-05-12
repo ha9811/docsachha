@@ -1,0 +1,2 @@
+rootProject.name='Appdocsach'
+include ':app'

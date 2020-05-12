@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/imgsach"
+        android:layout_width="140dp"
+        android:layout_height="200dp"
+        android:src="@drawable/sach1"
+        android:scaleType="fitXY"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:id="@+id/txtsach"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgsach"
+        android:text="Ten sach"
+        android:gravity="center_horizontal"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="5dp"/>
+</RelativeLayout>
